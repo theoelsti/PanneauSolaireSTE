@@ -1,0 +1,188 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+
+}
+
+
+.bigTitle, .subTitle{
+    color: white;
+    text-align: center;
+    font-family: sun;
+    cursor: default;
+
+}
+.subTitle{
+    font-size: 50px;
+}
+.bigTitle{
+    font-size: 120px;
+}
+.smallTitle{
+    font-size: 40px;
+}
+
+.button{
+    margin-top: 90px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.button-container{
+    background-color: #cb2d3e;
+    height: 70px;
+    width: 150px;
+    border-radius: 5%;    
+}
+
+.button-container:hover{
+    color: #b44b56;
+   
+}
+.button-text{
+    margin-top: 12.5%;
+    color: white;
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+@keyframes fadeOutAnimation { 
+    0% { 
+        opacity: 1; 
+    } 
+    100% { 
+        opacity: 0; 
+     } 
+} 
+
+/*
+Panneau de controle
+*/
+.titlePanel{
+    margin: 10px;
+    font-size: 40px;
+}
+.subtitlepanel{
+    font-size: 2px;
+}
+
+.titlePanel, .subtitlepanel{
+    color: white;
+    text-align: center;
+    font-family: sun;
+    cursor: default;
+
+}
+
+
+
+.buttonPanel{
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.buttonPanel-container{
+    background-color: #cb2d3e;
+    height: 80px;
+    width: 160px;
+    border-radius: 5%;  
+    margin: 10px;  
+}
+
+.buttonPanel-container:hover{
+    color: #b44b56;
+   
+}
+.buttonPanel-text{
+    margin-top: 15px;
+    color: white;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttonChart{
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.buttonChart-container{
+    background-color: #cb2d3e;
+    height: 80px;
+    width: 160px;
+    border-radius: 5%;  
+    margin: 10px;  
+}
+
+.buttonChart-container:hover{
+    color: #b44b56;
+   
+}
+.buttonChart-text{
+    margin-top: 15px;
+    color: white;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.stateLabel{
+    text-align: center;
+}
+#state{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+}
+.statee{
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#30122d;
+    color: white;
+    height: 80px;
+    width: 230px;
+    overflow: hidden;
+}
+.actual{
+    font-size: 40px;
+    text-align: center;
+    padding-left: 2px;
+}
+#swap-container{
+    cursor: pointer;
+}
+#meteoDiv{
+    width: 70%;
+    margin-left: 15%;
+}

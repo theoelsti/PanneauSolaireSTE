@@ -1,0 +1,45 @@
+@media only screen and (max-width: 1280px) {
+    .bigTitle, .subTitle{
+        color: white;
+        text-align: center;
+        font-family: sun;
+    }
+    .subTitle{
+        font-size: 80px;
+    }
+    .bigTitle{
+        font-size: 200px;
+    }
+    .titlePanel{
+        font-size: 60px;
+    }
+    .statee{
+        margin: 10px;
+        border-radius: 10px;
+        background-color:#30122d;
+        color: white;
+        height: 130px;
+        width: 340px;
+        overflow: hidden;
+    }
+    .actual{
+        font-size: 50px;
+    }
+    .buttonPanel-container{
+        background-color: #cb2d3e;
+        height: 100px;
+        width: 240px;
+        border-radius: 5%;  
+        margin: 10px;  
+    }
+    .buttonPanel-text{
+        margin-top: 15px;
+        color: white;
+        font-size: 200%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #meteoDiv{
+        width: 90%;
+        margin-left: 5%;
+    }
+  }

@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Sécurisation de panneau</title>
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style-responsive.css">
+    <script src='./scripts/jquery.js'></script>
+    <script src='./scripts/script.js'></script>
+    <script src='./scripts/chartjs.js'></script>
+
+    <link rel="shortcut icon" href="./images/favico.ico" />
+    <meta charset="UTF-8"/>
+
+    
+</head>
+
+<body onmousedown="return false" onselectstart="return false"; >
+    
+<div class="top" id="top">
+
+    <div id="title">
+        <div class="bigTitle">PanelShield</div>
+        <div class="subTitle"></div>     
+        </div>
+</div>
+
+<div class="panel" id="panel">
+    <div class="titlePanel" id="welcomePanel">Bienvenue sur le panneau de controle !</div>
+    <div id="state">
+        <div class="statee">
+            <div class="stateLabel "><b>Etat</b></div>
+            <div class="actualState actual"> &nbsp Recherche en cours...</div>
+        </div>
+        <div class="statee">
+            <div class="modeLabel "><b>Mode</b></div>
+            <div class="actualMode actual"> &nbsp Recherche en cours...</div>
+        </div>
+    </div>
+    <div class="buttonPanel">
+        <div class="buttonPanel-container" id='secure-container'>
+            <div class="buttonPanel-text" id='secureButton' ><a id='userSelect' href='index.php?secure=true'></a></div>
+        </div>
+        <div class="buttonPanel-container" id='swap-container'>
+            <div class="buttonPanel-text" id='modeSwap' ><a id='userMode' href='index.php?switch=true'></a></div>
+        </div>
+    </div>
+    <div class="buttonChart">
+        <div class="buttonChart-container" id='chart-container'>
+            <div class="buttonChart-text" id='chartButton' onclick="showChart()"><a id='userChart' style="cursor: pointer;">Yaaaaa</a></div>
+        </div>
+    </div>
+    <div class="buttonChart">
+        <div class="buttonChart-container" id='dir-container' style="background-color: #3B90DE;">
+            <div class="buttonChart-text" id='dirButton'>
+                <a id='userChart'>Direction</a>
+                <br>
+                <a id="dirValue"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="meteoDiv" >
+    <canvas id="meteoChart"></canvas>
+    <script>
+        var chartHidden = false;
+        function showChart(){
+            if(chartHidden){
+                document.getElementById("meteoChart").style.opacity = 1
+                document.getElementById("dir-container").style.opacity = 1
+                document.getElementById("userChart").innerHTML = "Cacher le graphique"
+                document.getElementById("chart-container").style.backgroundColor = "#cb2d3e"
+            }
+            else{
+                document.getElementById("meteoChart").style.opacity = 0
+                document.getElementById("dir-container").style.opacity = 0
+                document.getElementById("userChart").innerHTML = "Montrer le graphique"
+                document.getElementById("chart-container").style.backgroundColor = "#188B26"
+            }
+            chartHidden = !chartHidden
+        }
+        showChart()</script>
+</div>
+    
+</div>
+
+<script>
+    if(location.search[0] == "?"){
+        setTimeout(function (){
+            window.location.replace(location.pathname);
+        }, 1000)
+    }
+</script>
+<script src='./scripts/state.js'></script>
+
+</body>
+
+
+</html>
